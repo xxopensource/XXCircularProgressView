@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cz2-LN-tL8" customClass="XXCircularProgressView" customModule="XXCircularProgressView">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="01x-di-6Pz"/>
+                                    <constraint firstAttribute="height" constant="200" id="iUL-u9-7vO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconLayerFrameRatio">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.59999999999999998" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NOv-f3-p57">
+                                <connections>
+                                    <action selector="changeProgress:" destination="BYZ-38-t0r" eventType="valueChanged" id="LHv-gy-Pxp"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VV8-Fj-omg">
+                                <segments>
+                                    <segment title="Empty"/>
+                                    <segment title="Play"/>
+                                    <segment title="Pause"/>
+                                    <segment title="Stop"/>
+                                    <segment title="Download"/>
+                                    <segment title="Upload"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeIconStyle:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bzh-V6-JR0"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NOv-f3-p57" secondAttribute="trailing" constant="52" id="7vh-xX-CjO"/>
+                            <constraint firstItem="NOv-f3-p57" firstAttribute="centerX" secondItem="Cz2-LN-tL8" secondAttribute="centerX" id="8B6-Ao-xDY"/>
+                            <constraint firstItem="VV8-Fj-omg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="3" id="FDe-n3-rzR"/>
+                            <constraint firstItem="NOv-f3-p57" firstAttribute="top" secondItem="Cz2-LN-tL8" secondAttribute="bottom" constant="54" id="GqG-dk-qQf"/>
+                            <constraint firstAttribute="trailing" secondItem="VV8-Fj-omg" secondAttribute="trailing" constant="3" id="W56-5m-cdP"/>
+                            <constraint firstItem="Cz2-LN-tL8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jpg-tk-KVt"/>
+                            <constraint firstItem="Cz2-LN-tL8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mne-F0-N0l"/>
+                            <constraint firstItem="VV8-Fj-omg" firstAttribute="top" secondItem="NOv-f3-p57" secondAttribute="bottom" constant="44" id="xel-uZ-Zve"/>
+                            <constraint firstItem="NOv-f3-p57" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="52" id="ycU-eP-VhT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="Cz2-LN-tL8" id="rGf-R2-FLt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
