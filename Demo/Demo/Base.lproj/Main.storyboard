@@ -19,7 +19,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cz2-LN-tL8" customClass="XXCircularProgressView" customModule="XXCircularProgressView">
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="01x-di-6Pz"/>
                                     <constraint firstAttribute="height" constant="200" id="iUL-u9-7vO"/>
